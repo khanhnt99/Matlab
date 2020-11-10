@@ -1,0 +1,11 @@
+f1=@(x)(x.^2).*exp(-x/4);
+f2=@(x)cos(x)+exp(x/2);
+x=(-2:0.2:2);
+tm=(-2:0.5:2);
+figure(1);
+plot(x,f1(x),tm,f1(tm),'ro');
+legend('f1=(x.^2).*exp(-x/4)','f2=cos(x)+exp(x/2)');
+title('Do thi cho phuong trinh f1');
+hold on;
+plot(x,f2(x),tm,f2(tm),'ro');
+title('Do thi cho phuong trinh f2');
