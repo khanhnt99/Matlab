@@ -1,0 +1,10 @@
+T0=8;
+t=(-T0:T0/32:T0);
+w1=cos(2*pi*t);
+w2=zeros(1,length(t));
+ind=(t>T0/2) & (t<T0/2);
+w2(ind)=1;
+Ns=length(t);
+f=(-Ns/2:Ns/2-1)/(Ns*(t(2)-t(1)));
+A1=fft(w1,Ns);
+A
